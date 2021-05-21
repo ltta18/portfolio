@@ -26,6 +26,8 @@ module.exports = function (config, env) {
             '@heading-color': '#000',
             '@text-color': '#222',
             '@font-size-base': '13px',
+            '@font-family': 'Merriweather',
+            '@code-family': 'Open Sans',
           },
         },
       }),

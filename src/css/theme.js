@@ -1,5 +1,8 @@
 const theme = {
-  dark: { main: 'mediumseagreen' },
+  fonts: {
+    text: 'Merriweather',
+    header: 'Open Sans',
+  },
 };
 
 export default theme;
