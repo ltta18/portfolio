@@ -37,6 +37,8 @@ module.exports = function (config, env) {
         '@components': path.resolve(__dirname, 'src/components'),
         '@containers': path.resolve(__dirname, 'src/containers'),
         '@css': path.resolve(__dirname, 'src/css'),
+        '@lib': path.resolve(__dirname, 'src/lib'),
+        '@redux': path.resolve(__dirname, 'src/redux'),
       }),
     )(config, env),
   );
