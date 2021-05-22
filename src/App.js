@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
-import '@css/globalStyles';
 import CommonHeader from '@components/common/CommonHeader';
 import { ThemeProvider } from 'styled-components';
-import theme from '@css/theme';
 import { Layout } from 'antd';
 import { Provider } from 'react-redux';
+import theme from '@css/theme';
 import store from './redux/store';
+import './App.css';
+import '@css/globalStyles';
 
 function App() {
   return (
