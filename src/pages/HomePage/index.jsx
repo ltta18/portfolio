@@ -1,5 +1,6 @@
 import React from 'react';
-import HomeIntro from '../../components/home/HomeIntro';
+import HomeIntro from '@components/home/HomeIntro';
+import HomeWelcome from '@components/home/HomeWelcome';
 
 const HomePage = () => {
   const name = (params) => {
@@ -8,6 +9,7 @@ const HomePage = () => {
 
   return (
     <div>
+      <HomeWelcome />
       <HomeIntro />
     </div>
   );

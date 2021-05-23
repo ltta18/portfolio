@@ -1,21 +1,28 @@
 import styled from 'styled-components';
 
-export const HomeIntroText = styled.div`
+// Home Welcome
+export const HomeWelcomeText = styled.div`
   position: absolute;
   top: 50%;
-  padding-left: 100px;
+  width: fit-content;
+  left: 0;
+  right: 0;
+  margin: auto;
   h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
   h2 {
     font-size: 24px;
+    text-align: center;
   }
   .ant-row {
-    margin-bottom: 20px;
+    margin: auto;
+    margin-bottom: 24px;
+    width: fit-content;
   }
 `;
 
-export const HomeIntroScrollButton = styled.div`
+export const HomeWelcomeScrollButton = styled.div`
   position: absolute;
   bottom: 16px;
   left: 0;
@@ -38,4 +45,18 @@ export const HomeIntroScrollButton = styled.div`
         100% { transform:  translateY(0); }
     }
     
+`;
+
+// Home Intro
+export const HomeIntroStyles = styled.div`
+  margin-top: 100px;
+  background: #fff;
+  padding: 70px;
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  h1 {
+    margin: 16px;
+  }
 `;

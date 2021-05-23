@@ -1,135 +1,28 @@
-import {
-  Button, Col, Input, Row,
-} from 'antd';
-import React, { useState } from 'react';
-import Particles from 'react-tsparticles';
-import styled from 'styled-components';
-import ScrollAnimation from 'react-animate-on-scroll';
-import { DownOutlined } from '@ant-design/icons';
-import { HomeIntroText, HomeIntroScrollButton } from './HomePage.styled';
+import { Col, Image, Row } from 'antd';
+import React from 'react';
+import Avatar from '@assets/avatar.jpg';
+import { HomeIntroStyles } from './HomePage.styled';
 
 const HomeIntro = () => {
-  const [isAppear, setIsAppear] = useState(false);
-  const defaultStyle = {
-    transition: 'opacity 300ms ease-in-out',
-    opacity: 0,
-  };
-  const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { opacity: 1 },
-    exiting: { opacity: 0 },
-    exited: { opacity: 0 },
+  const name = (params) => {
+
   };
 
   return (
-    <div>
-      <Particles
-        id="tsparticles"
-        options={{
-          background: {
-            color: {
-              value: '#0d47a1',
-            },
-          },
-          fpsLimit: 80,
-          interactivity: {
-            detectsOn: 'canvas',
-            events: {
-              onClick: {
-                enable: true,
-                mode: 'push',
-              },
-              onHover: {
-                enable: true,
-                mode: 'repulse',
-              },
-              resize: true,
-            },
-            modes: {
-              bubble: {
-                distance: 200,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-              },
-              push: {
-                quantity: 10,
-              },
-              repulse: {
-                distance: 100,
-                duration: 0.4,
-              },
-            },
-          },
-          particles: {
-            color: {
-              value: ['#ffffff', 'yellow'],
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              direction: 'none',
-              enable: true,
-              outMode: 'bounce',
-              random: true,
-              speed: 0.1,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-              value: 300,
-            },
-            opacity: {
-              value: 0.8,
-            },
-            shape: {
-              type: ['polygon', 'circle'],
-            },
-            size: {
-              random: true,
-              value: 2,
-              animation: {
-                enable: true,
-                speed: 6,
-                minimumValue: 0.1,
-                sync: false,
-              },
-            },
-          },
-          detectRetina: true,
-        }}
-      />
-      <HomeIntroText>
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
-          <Row gutter={[8, 32]} align="middle">
-            <Col>
-              <h1>Hello,</h1>
-            </Col>
-            <Col>
-              <Input defaultValue="there" size="large" autoFocus />
-            </Col>
-            <Col>
-              <h1>!</h1>
-            </Col>
-          </Row>
-        </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" delay={900}>
-          <Row>
-            <h2>Welcome to my portfolio!</h2>
-          </Row>
-        </ScrollAnimation>
-      </HomeIntroText>
-      <HomeIntroScrollButton>
-        <Button type="text">
-          <h3 className="bounce">Scroll down</h3>
-          <DownOutlined />
-        </Button>
-      </HomeIntroScrollButton>
-    </div>
+    <HomeIntroStyles id="intro">
+      <Row>
+        <Col span={12} offset={6}>
+          <Image
+            width={200}
+            height={200}
+            src={Avatar}
+            preview={false}
+          />
+          <h1>Hi, I'm Linh</h1>
+          <p>I'm a Computer Science senior at Earlham College with a Math minor.</p>
+        </Col>
+      </Row>
+    </HomeIntroStyles>
   );
 };
 
