@@ -7,11 +7,9 @@ import appActions, { getView } from '@redux/actions';
 import useWindowSize from '@lib/useWindowSize';
 import { MenuOutlined } from '@ant-design/icons';
 
-const {
-  Header, Content, Footer, Sider,
-} = Layout;
+const { Header } = Layout;
 
-const { toggleAll, toggleOpenDrawer, toggleCollapsed } = appActions;
+const { toggleAll, toggleOpenDrawer } = appActions;
 
 const CommonHeader = () => {
   const { width, height } = useWindowSize();
@@ -58,7 +56,7 @@ const CommonHeader = () => {
         </Menu>
 
       </Drawer>
-      <Layout.Header
+      <Header
         style={{
           position: 'fixed',
           zIndex: 1,
@@ -93,7 +91,7 @@ const CommonHeader = () => {
             )}
 
         </Menu>
-      </Layout.Header>
+      </Header>
     </div>
   );
 };
