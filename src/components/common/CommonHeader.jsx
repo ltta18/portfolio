@@ -77,9 +77,11 @@ const CommonHeader = () => {
           { this.renderUserLinks() } */}
           {getView(width) === 'MobileView'
             ? (
-              <Button onClick={() => dispatch(toggleOpenDrawer())}>
-                <MenuOutlined />
-              </Button>
+              <Menu.Item>
+                <Button onClick={() => dispatch(toggleOpenDrawer())}>
+                  <MenuOutlined />
+                </Button>
+              </Menu.Item>
             )
             : (
               <>

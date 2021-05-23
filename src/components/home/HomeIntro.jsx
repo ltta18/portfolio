@@ -1,8 +1,25 @@
+import {
+  Button, Col, Input, Row,
+} from 'antd';
 import React, { useState } from 'react';
 import Particles from 'react-tsparticles';
+import styled from 'styled-components';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { DownOutlined } from '@ant-design/icons';
+import { HomeIntroText, HomeIntroScrollButton } from './HomePage.styled';
 
 const HomeIntro = () => {
-  const [state, setState] = useState();
+  const [isAppear, setIsAppear] = useState(false);
+  const defaultStyle = {
+    transition: 'opacity 300ms ease-in-out',
+    opacity: 0,
+  };
+  const transitionStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 1 },
+    exiting: { opacity: 0 },
+    exited: { opacity: 0 },
+  };
 
   return (
     <div>
@@ -14,7 +31,7 @@ const HomeIntro = () => {
               value: '#0d47a1',
             },
           },
-          fpsLimit: 60,
+          fpsLimit: 80,
           interactivity: {
             detectsOn: 'canvas',
             events: {
@@ -46,7 +63,7 @@ const HomeIntro = () => {
           },
           particles: {
             color: {
-              value: '#ffffff',
+              value: ['#ffffff', 'yellow'],
             },
             collisions: {
               enable: true,
@@ -64,20 +81,20 @@ const HomeIntro = () => {
                 enable: true,
                 value_area: 800,
               },
-              value: 200,
+              value: 300,
             },
             opacity: {
-              value: 0.5,
+              value: 0.8,
             },
             shape: {
               type: ['polygon', 'circle'],
             },
             size: {
               random: true,
-              value: 3,
+              value: 2,
               animation: {
                 enable: true,
-                speed: 5,
+                speed: 6,
                 minimumValue: 0.1,
                 sync: false,
               },
@@ -86,6 +103,32 @@ const HomeIntro = () => {
           detectRetina: true,
         }}
       />
+      <HomeIntroText>
+        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+          <Row gutter={[8, 32]} align="middle">
+            <Col>
+              <h1>Hello,</h1>
+            </Col>
+            <Col>
+              <Input defaultValue="there" size="large" autoFocus />
+            </Col>
+            <Col>
+              <h1>!</h1>
+            </Col>
+          </Row>
+        </ScrollAnimation>
+        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut" delay={900}>
+          <Row>
+            <h2>Welcome to my portfolio!</h2>
+          </Row>
+        </ScrollAnimation>
+      </HomeIntroText>
+      <HomeIntroScrollButton>
+        <Button type="text">
+          <h3 className="bounce">Scroll down</h3>
+          <DownOutlined />
+        </Button>
+      </HomeIntroScrollButton>
     </div>
   );
 };

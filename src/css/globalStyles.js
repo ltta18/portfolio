@@ -1,7 +1,14 @@
-import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
-const Title = styled.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
+const GlobalStyles = createGlobalStyle`
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0
+}
 `;
+
+export default GlobalStyles;

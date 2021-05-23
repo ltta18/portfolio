@@ -5,15 +5,16 @@ import { Layout } from 'antd';
 import { Provider } from 'react-redux';
 import theme from '@css/theme';
 import { Content } from 'antd/lib/layout/layout';
-import store from './redux/store';
 import './App.css';
-import '@css/globalStyles';
-import HomePage from './pages/HomePage';
+import GlobalStyles from '@css/globalStyles';
+import HomePage from '@pages/HomePage';
+import store from '@redux/store';
 
 function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
+        <GlobalStyles />
         <Layout className="App">
           <CommonHeader />
           <Content>

@@ -35,7 +35,7 @@ module.exports = function (config, env) {
       addWebpackAlias({
         '@assets': path.resolve(__dirname, 'src/assets'),
         '@components': path.resolve(__dirname, 'src/components'),
-        '@containers': path.resolve(__dirname, 'src/containers'),
+        '@pages': path.resolve(__dirname, 'src/pages'),
         '@css': path.resolve(__dirname, 'src/css'),
         '@lib': path.resolve(__dirname, 'src/lib'),
         '@redux': path.resolve(__dirname, 'src/redux'),
